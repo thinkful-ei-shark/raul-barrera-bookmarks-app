@@ -1,6 +1,6 @@
 ### Raul Barrera's Bookmarks App
 
-##### ***[LIVE DEMO](https://thinkful-ei-shark.github.io/richard-bookmarks-app/)***  
+##### ***[LIVE DEMO](https://thinkful-ei-shark.github.io/raul-barrera-bookmarks-app/)***  
 ---
 ### User Stories
 

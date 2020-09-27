@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
+    publicPath: "/raul-barrera-bookmarks-app/",
     path: __dirname + '/dist',
     filename: 'index_bundle.js'
   },

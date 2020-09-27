@@ -1,7 +1,9 @@
 # Bookmark App
 
 ##### ***[LIVE DEMO](https://thinkful-ei-shark.github.io/richard-bookmarks-app/)***  
----### User Stories
+---
+
+### User Stories
 
 As a user:
 
@@ -26,6 +28,7 @@ As a user:
     
 -   (Extension feature - optional) I can edit the rating and description of a bookmark in my list
     
+---
 
 ### Technical Requirements
  `fetch`  for AJAX calls and jQuery for DOM manipulation

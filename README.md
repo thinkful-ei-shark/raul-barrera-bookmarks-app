@@ -18,6 +18,7 @@
 * I can select from a dropdown (a <select> element) a "minimum rating" to filter the list by all bookmarks rated at or above the chosen selection
 
 ## Technical Requirements
+
 * Use fetch for AJAX calls and jQuery for DOM manipulation
 * Use namespacing to adhere to good architecture practices
   * Minimal global variables

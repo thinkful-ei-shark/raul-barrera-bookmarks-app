@@ -1,5 +1,5 @@
 {
-  "name": "raul-barrera-bookmarks-app",
+  "name": "bookmark-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "deploy": "gh-pages -d dist",
     "start": "webpack-dev-server",
     "build": "webpack --mode production"
   },

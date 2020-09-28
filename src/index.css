@@ -1,7 +1,19 @@
 body{
     max-width: 400px;
     margin: auto;
-    padding: 10px;
+    background-color: rgb(61, 3, 3);
+    padding-top: 100px;
+}
+
+h2 {
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+    padding: 10px 0;
+    background-color: burlywood;
+}
+main>div, form, div#rating, div.new-form-btns>button {
+    border-radius: 25px;
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+    padding: 15px;
 }
 
 form, main>div {
@@ -11,41 +23,29 @@ form, main>div {
     background-color: beige;
     text-align: center;
     min-height: 600px;
+}
 
+select {
+    font-size: large;
+    border-radius: 25px;
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+    
 }
 
 label {
     padding: 10px;
 }
 
-input[type="submit"] {
-    max-width: 150px;
-    margin: auto;
-    padding: 10px;
-    font-weight: bolder;
-    font-size: large;
-}
-
-div.bookmark {
+div.bookmark, div.sub-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-div.bookmark span.title {
+
     padding-left: 10px;
     font-size: large;
     font-weight: bold;
-}
-div.bookmark span.rating {
-    margin-right: 10px;
-    font-size: large;
-}
-.js-bm-list {
-    margin-top: 10px;
-    padding: 5px 5px;
-    border: 3px solid gray;
-    border-radius: 25px;
-    background-color: beige;
+
+    padding: 10px;
 }
 
 .js-bookmark {
@@ -56,46 +56,87 @@ div.bookmark span.rating {
     background-color: burlywood;
     display: flex;
     flex-direction: column;
-}
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
 
-#desc {
-    margin-top: 10px;
-    height: 300px;
 }
 
 input[type="radio"]{
     display: none;
 }
+
 div#rating{
-    background-color: rgb(100, 5, 5);
+    background-color: burlywood;
     font-size: xx-large;    
-    padding: 0;
     margin: 20px 0;
+    padding: 0;
 }
 
 .no-fill {
-    color: white;
-}
-
-.fill {
     color: black;
 }
 
-#delete {
-    font-size: xx-large;
-    border: none;
-    background-color: burlywood;
+.fill {
+    color: yellow;
 }
 
-#plus {
+button#delete {
+    font-size: large;
+    border: none;
+    background-color: beige;
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+    font-weight: bold;
+}
+button#new{
     color: green;
     font-size: large;
+    border-radius: 25px;
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
 }
 
 div.error-display {
     min-height: 0;
 }
+
 .hidden {
     visibility: hidden;
     margin-top: -50px;
+}
+
+#btns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#visit {
+    border: none;
+    background-color: beige;
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+    font-size: large;
+    font-weight: bold;
+}
+
+input[type=text], textarea{
+    box-shadow: 8px 8px 2px 1px rgba(153, 151, 8, 0.877);
+}
+
+input[type=text] {
+    height: 30px;
+}
+
+label {
+    font-size: large;
+    font-weight: bold;
+    
+}
+.new-form-btns {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;  
+}
+
+div.new-form-btns>button {
+    background-color: burlywood;
+    padding: 10px;
+    margin-top: 15px;
 }

@@ -41,8 +41,8 @@ const generateBookmarkElement = function(bm){
     let el;
     if(bm.expanded){
         el = `
-        <span class="bookmark">${bm.title}<button id="delete">&#128465;</button></span>
-        <span class="sub-header"><button href="${bm.url}" id="visit">Visit Site</button>Rating: ${bm.rating? bm.rating:'None'}</span>
+        <div class="bookmark"><span>${bm.title}</span><button id="delete">&#128465; Delete</button></div>
+        <div class="sub-header"><button href="${bm.url}" id="visit">Visit Site</button><span>Rating: ${bm.rating}</span></div>
         <p class="desc">${bm.desc? bm.desc: 'No description available.'}</p>
         `;
     } else {
@@ -62,7 +62,7 @@ const generateBookmarksString = function(bmList){
         <div>
             <h2>My Bookmarks</h2>
             <div id="btns-container">
-                <button id="new"><span id="plus">&#10010;</span> New</button>
+                <button id="new">&#10010; New</button>
                 <select name="rating" id="rating">
                     <option value="">Filter By</options>
                     <option value="1">(1 Star) &#9733;</option>
@@ -93,12 +93,12 @@ const generateAddView = function(){
         <h2>My Bookmarks</h2>
         <label for="url">Add New Bookmark:</label>
         <input type="text" id="url" placeholder="https://www.example.com" required>
-        <label for="title"></label>
+        <label for="title">Enter name of Bookmark:</label>
         <input type="text" id="title" placeholder="Name" required>
 
         <div id="rating">
-            <input type="radio" id="1-star" class="no-fill" name="rating" value="1" required>
-            <label for="1-star" class="no-fill">&#9733;</label>
+            <input type="radio" id="1-star" class="fill" name="rating" value="1" checked="checked" required>
+            <label for="1-star" class="fill">&#9733;</label>
             <input type="radio" id="2-star" class="no-fill" name="rating" value="2">
             <label for="2-star" class="no-fill">&#9733;</label>
             <input type="radio" id="3-star" class="no-fill" name="rating" value="3">
@@ -109,16 +109,22 @@ const generateAddView = function(){
             <label for="5-star" class="no-fill">&#9733;</label>
         </div>
         
-        <input type="textarea" id="desc" placeholder="Add a description (optional)">                
+        <textarea id="desc" placeholder="Add a description (optional)" rows="10"></textarea>                
         
 
-        <div>
+        <div class="new-form-btns">
             <button type="reset">Cancel</button>
             <button type="submit">Create</button>
         </div>
 
     </form>
     `
+}
+
+const handleVisitClick = function() {
+    $('main').on('click', '#visit', function(e){
+        window.open($(e.currentTarget).attr('href'));
+    });
 }
 
 const render = function() {    
@@ -211,6 +217,7 @@ const bindEventListeners = function(){
     handleRatingSelected();
     handleFilter();
     handleCloseError();
+    handleVisitClick();
 }
 
 export default {

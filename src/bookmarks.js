@@ -78,7 +78,7 @@ const generateBookmarksString = function(bmList){
 }
 
 const handleFilter = function(){
-    $('main').on('click', 'select', function(){
+    $('main').on('change', 'select', function(){
         let rating = $('select').val();
         if(rating){
             store.status.filter = rating;
